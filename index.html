@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dekarlo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css"> 
+  <style>
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: thistle;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:100px">Gabs City</h1>
+    <p>The city of light</p>
+      <form class="form-inline" action="lifestyle.html">
+        <button>visit us!!</button>
+      </form>
+  </div>
+</div>
+<div class="topnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="lifestyle.HTML">LifeStyle</a>
+  <a href="about.html">About Us</a>
+  <a href="feedback.html">FeedBack</a>
+  <a href="contact_us.html">Contact Us</a>
+</div>
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <img src="slideshow_1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="slideshow_2.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="slideshow_3.jpg" style="width:100%">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+    
+<footer class="container-fluid text-center">
+  <p>Gabs City Copyright</p>  
+  <form class="form-inline" action="feedback.html">Make bookings:
+    <button type="submit" class="btn btn-danger">Contact Us</button>
+  </form>
+</footer>
+
+</body>
+</html>
